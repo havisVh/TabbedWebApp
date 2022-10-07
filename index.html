@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <link rel="stylesheet" href="tab.min.css">
+    <!-- <link rel="manifest" href="manifest.json"> -->
+    <meta name="theme-color" content="#5656f6" />
+    <script type="text/javascript" src="https://npmcdn.com/parse/dist/parse.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <meta name="description" content="The Official Website of HVH Music">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.png">
+    <script src="https://kit.fontawesome.com/9dbf0a8c73.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="body">
+    <div id="mySidenav" class="sidenav">
+        <div style="    background: #101010;
+    border-bottom: 2px solid #4c4c4c;
+    margin-bottom: 21px;">
+            <img src="logo.png" class="logoSideNav" alt="app logo">
+            <span href="javascript:void(0)" class=" material-symbols-rounded closebtn" onclick="closeNav()"
+                aria-label="close sidebar" id="NOEXCUSE">cancel</span>
+            <p id="userfn" style="color:rgba(255, 255, 255, 0.226) ;font-size: 14px;text-align: center;"></p>
+        </div>
+        <div class="side-button tablink" onclick="openPage('home',this)" id="defaultOpen" aria-label="add new Data">
+            <span class="material-symbols-rounded">add_circle</span>
+            <p>Add new Data</p>
+        </div>
+        <div class="side-button tablink" onclick="openPage('search',this)" aria-label="open search tab">
+            <span class="material-symbols-rounded ">search</span>
+            <p>Query Added Data</p>
+        </div>
+        <div class="side-button tablink" onclick="openPage('settings',this)" aria-label="open settings tab">
+            <span class="material-symbols-rounded">settings</span>
+            <p>Settings</p>
+        </div>
+        <div class="side-button tablink" style="color: rgba(255, 255, 255, 0.459);" onclick="openPage('help',this)"
+            aria-label="open help page">
+            <span class="material-symbols-rounded">help</span>
+            <p style="color: rgba(255, 255, 255, 0.459);">help</p>
+        </div>
+
+    </div>
+    <div id="main" class="main">
+        <header>
+            <!--  -->
+            <span class="material-symbols-rounded clickable" onclick="openNav()">
+                menu
+            </span>
+            <span id="offlineA"
+                style="color: red;display: none;flex-wrap: wrap;flex-direction: row;align-content: center;align-items: center;justify-content: center;">&nbsp;
+                <span class="material-symbols-rounded">wifi_off</span></span>
+            <button class="dev_button_mobile" style="right:45px" id="installMobile" onclick="pwainstall()"
+                aria-label="install to the device">
+                <span class="material-symbols-rounded clickable" style="font-size:18px">install_mobile</span>
+            </button>
+            <button class="dev_button_mobile" onclick="share()" aria-label="share the song">
+                <span class="material-symbols-rounded clickable" style="font-size:18px">share</span>
+            </button>
+        </header>
+
+        <section id="home" class="tabcontent"></section>
+        <section id="search" class="tabcontent"></section>
+        <section id="settings" class="tabcontent"></section>
+        <section id="help" class="tabcontent"></section>
+
+        <script src="tab.js"></script>
+    </div>
+</body>
+
+</html>
