@@ -4,10 +4,9 @@
 <head>
 
 
-    <link rel="stylesheet" href="tab.min.css">
-    <!-- <link rel="manifest" href="manifest.json"> -->
+    <link rel="stylesheet" href="save.min.css">
+    <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#5656f6" />
-    <script type="text/javascript" src="https://npmcdn.com/parse/dist/parse.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
@@ -15,12 +14,12 @@
 
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <meta name="description" content="The Official Website of HVH Music">
+    <meta name="description" content="An awesome Tabbed App">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="favicon.png">
-    <script src="https://kit.fontawesome.com/9dbf0a8c73.js" crossorigin="anonymous"></script>
+    <title>Tabbed Web App</title>
 </head>
 
 <body class="body">
@@ -31,28 +30,29 @@
             <img src="logo.png" class="logoSideNav" alt="app logo">
             <span href="javascript:void(0)" class=" material-symbols-rounded closebtn" onclick="closeNav()"
                 aria-label="close sidebar" id="NOEXCUSE">cancel</span>
-            <p id="userfn" style="color:rgba(255, 255, 255, 0.226) ;font-size: 14px;text-align: center;"></p>
+            <p style="color:#f1f1f1a3;font-size: 14px;text-align: center;">Tabbed Web App</p>
         </div>
-        <div class="side-button tablink" onclick="openPage('home',this)" id="defaultOpen" aria-label="add new Data">
-            <span class="material-symbols-rounded">add_circle</span>
-            <p>Add new Data</p>
+        <div class="side-button tablink" onclick="openPage('home',this)" id="defaultOpen" aria-label="open home page">
+            <span class="material-symbols-rounded">home</span>
+            <p>Home</p>
         </div>
-        <div class="side-button tablink" onclick="openPage('search',this)" aria-label="open search tab">
-            <span class="material-symbols-rounded ">search</span>
-            <p>Query Added Data</p>
+        <div class="side-button tablink" onclick="openPage('counterPage',this)" aria-label="open counter tab">
+            <span class="material-symbols-rounded ">calculate</span>
+            <p>Counter</p>
         </div>
-        <div class="side-button tablink" onclick="openPage('settings',this)" aria-label="open settings tab">
-            <span class="material-symbols-rounded">settings</span>
-            <p>Settings</p>
+        <div class="side-button tablink" onclick="openPage('info',this)" aria-label="open info tab">
+            <span class="material-symbols-rounded">info</span>
+            <p>Your Info page</p>
         </div>
-        <div class="side-button tablink" style="color: rgba(255, 255, 255, 0.459);" onclick="openPage('help',this)"
+        <div class="side-button tablink" style="color: rgba(255, 255, 255, 0.459);" onclick="openPage('github',this)"
             aria-label="open help page">
-            <span class="material-symbols-rounded">help</span>
-            <p style="color: rgba(255, 255, 255, 0.459);">help</p>
+            <span class="material-symbols-rounded">code</span>
+            <p style="color: rgba(255, 255, 255, 0.459);">Github and Stuff!</p>
         </div>
 
     </div>
     <div id="main" class="main">
+
         <header>
             <!--  -->
             <span class="material-symbols-rounded clickable" onclick="openNav()">
@@ -61,21 +61,73 @@
             <span id="offlineA"
                 style="color: red;display: none;flex-wrap: wrap;flex-direction: row;align-content: center;align-items: center;justify-content: center;">&nbsp;
                 <span class="material-symbols-rounded">wifi_off</span></span>
-            <button class="dev_button_mobile" style="right:45px" id="installMobile" onclick="pwainstall()"
-                aria-label="install to the device">
-                <span class="material-symbols-rounded clickable" style="font-size:18px">install_mobile</span>
-            </button>
-            <button class="dev_button_mobile" onclick="share()" aria-label="share the song">
-                <span class="material-symbols-rounded clickable" style="font-size:18px">share</span>
-            </button>
+            <div class="headerButtonContainer">
+                <button class="dev_button_mobile" id="installMobile" onclick="pwainstall()"
+                    aria-label="install to the device">
+                    <span class="material-symbols-rounded clickable" style="font-size:18px">install_mobile</span>
+                </button>
+                <button class="dev_button_mobile" onclick="share()" aria-label="share the song">
+                    <span class="material-symbols-rounded clickable" style="font-size:18px">share</span>
+                </button>
+            </div>
         </header>
+        <!-- HOME PAGE : START-->
+        <section id="home" class="tabcontent">
 
-        <section id="home" class="tabcontent"></section>
-        <section id="search" class="tabcontent"></section>
-        <section id="settings" class="tabcontent"></section>
-        <section id="help" class="tabcontent"></section>
+            <h1>Welcome to your first Tabbed Web App</h1>
+            <hr style="width:70%">
+            <p>written entirely in HTML and Javascript</p><br>
+            <p>This is just a demo, a boilerplate if you would...<br>Go out there, make it yours...<br>make it better!
+                Make your product standout.<br>
+                Have fun coding!!
+            </p>
+        </section>
+        <!-- HOME PAGE : END && COUNTER PAGE : START -->
+        <section id="counterPage" class="tabcontent">
+            <h3>Apparently every framework has this!</h3>
+            <hr style="width:70%">
 
-        <script src="tab.js"></script>
+            <p>Click Below to Increment the counter</p>
+            <button class="dev_button clickable" style="height:50px" aria-label="Counter button"
+                onclick="incrementCountby(1)">
+                Click Me!
+            </button>
+            <p id="counter">0</p>
+        </section>
+        <!-- COUNTER PAGE : END && INFO PAGE : START -->
+        <section id="info" class="tabcontent">
+            <h3>Okay Alright, I am running out of things to write!</h3>
+            <hr style="width:70%">
+
+            <p>Hey Jeff🔥! 👋🏽</p>
+            <p>Check the github repo for updates!</p>
+            <p>...Also run the lighthouse report for free fireworks! 🎆🎇</p>
+        </section>
+        <!-- INFO PAGE : END && GITHUB PAGE : START -->
+        <section id="github" class="tabcontent">
+            <h3>Links to various extremely useful resources</h3>
+            <hr style="width:70%">
+
+
+            <p>The Github Repo Page : <a href="https://github.com/havisVh/TabbedWebApp">Github.com</a></p>
+            <p>Maskable.app : <a href="https://maskable.app/editor">Maskable App</a></p>
+            <p>Learn more about PWAs : <a href="https://web.dev/progressive-web-apps/">web.dev</a></p>
+            <p>Font and Icons : <a href="https://fonts.google.com/">Google Fonts</a></p>
+            <hr style="width:100px">
+            <p>JS && CSS Minifier extension for VSCode: <a
+                    href="https://marketplace.visualstudio.com/items?itemName=olback.es6-css-minify">Visual Studio
+                    Marketplace</a></p>
+
+
+        </section>
+        <!-- GITHUB PAGE : END -->
+        <script>
+            var count = 0;
+            function incrementCountby(k) {
+                count += k; document.getElementById('counter').innerHTML = count
+            }
+        </script>
+        <script src="tab.min.js"></script>
     </div>
 </body>
 

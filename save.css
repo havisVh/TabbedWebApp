@@ -1,0 +1,350 @@
+:root {
+    --accent: #5656f6;
+    --text: white;
+    --sub: #ffffffa6;
+    cursor: default;
+    image-rendering: auto;
+}
+
+html {
+    color: #fff;
+    margin: 0;
+    align-items: flex-start;
+    scrollbar-color: var(--text) #474747;
+    scrollbar-width: thin;
+    font-family: Poppins, sans-serif;
+    animation: gradient 10s ease infinite;
+    scrollbar-width: none
+}
+
+.body {
+    color: var(--text);
+    margin: 0;
+    height: 100vh;
+    transition: .4s;
+    background: #111;
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center
+}
+
+.sidenav {
+    height: 100%;
+    width: 22vw;
+    position: fixed;
+    z-index: 31;
+    top: 0;
+    left: 0;
+    background-color: #21212100;
+    overflow-x: hidden;
+    transition: .4s;
+    backdrop-filter: blur(6px)
+}
+
+.sidenav a {
+    cursor: pointer;
+    padding: 10px 4px 8px 20px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    transition: .3s
+}
+
+.material-symbols-rounded {
+    font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48
+}
+
+.material-symbols-rounded-fill {
+    font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48
+}
+
+.side-button {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 12px;
+    border-radius: 0;
+    margin-right: 4px;
+    transition: .2s ease;
+    cursor: pointer
+}
+
+.side-button P {
+    color: #fff;
+    font-size: 14px;
+    margin: 0;
+    padding-left: 1vw
+}
+
+.side-button:hover {
+    transform: translate(4px, -2px);
+    text-shadow: -3px 8px 11px rgb(0 0 0);
+    background-color: #282828;
+    border-radius: 4px;
+    box-shadow: -8px 6px 11px 5px rgb(16 16 16)
+}
+
+.logoSideNav {
+    width: 100px;
+    cursor: pointer;
+    margin: 9px;
+    border-radius: 4px;
+}
+
+.sidenav .closebtn {
+    display: none;
+    cursor: pointer;
+    transition: .2s
+}
+
+.sidenav .closebtn:hover {
+    color: var(--accent);
+    text-shadow: -1px 1px 12px var(--accent);
+    background: linear-gradient(121deg, var(--accent), #ca00ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent
+}
+
+.tablink {
+    text-decoration: none
+}
+
+.tablink:hover {
+    background-color: rgba(253, 253, 253, .212)
+}
+
+.main {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    overflow: hidden
+}
+
+header {
+
+    display: none;
+    z-index: 28;
+}
+
+.clickable {
+    cursor: pointer
+}
+
+.headerButtonContainer {
+    position: absolute;
+    right: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+    align-content: flex-end;
+}
+
+.dev_button_mobile {
+    width: 30px;
+    height: 30px;
+    margin: 4px;
+    border-radius: 15px;
+    border: none;
+    background: #161618;
+    border: .2px #292929 solid;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* position: absolute;
+    right: 12px; */
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    transition: .4s
+}
+
+.dev_button_mobile:hover {
+    scale: 110%;
+    background-color: #000;
+    box-shadow: -4px 8px 7px 0 #0000004a;
+    color: var(--accent)
+}
+
+.tabcontent {
+    transition: .2s;
+    display: flex;
+    overflow: scroll;
+    background-color: #29292977;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--text);
+    padding: 12px;
+    height: 91vh;
+    right: 0px;
+    width: 73vw;
+    margin: 12px;
+    border-radius: 6px;
+    box-shadow: 4px 7px 12px 0 #000000d4;
+    position: absolute;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+    height: 0;
+    border-radius: 12px
+}
+
+::-webkit-scrollbar-track {
+    background: #50505000
+}
+
+::-webkit-scrollbar-thumb {
+    background: #fff
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ddd
+}
+
+::-webkit-scrollbar-corner {
+    color: #000
+}
+
+@media screen and (max-height:450px) {
+    .sidenav {
+        padding-top: 15px
+    }
+
+    .sidenav a {
+        font-size: 18px
+    }
+}
+
+.dev_button {
+    width: 107px;
+    height: 110px;
+    margin: 12px;
+    border-radius: 4px;
+    border: none;
+    background: #282828;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    transition: .4s;
+    box-shadow: 1px 1px 2px 0px #0000004a;
+}
+
+.dev_button:hover {
+    scale: 110%;
+    background-color: #000;
+    transform: translate(4px, -2px);
+    box-shadow: -4px 8px 7px 0 #0000004a;
+    color: var(--accent)
+}
+
+.dev_button:hover .accent {
+    color: #fff
+}
+
+a {
+    text-decoration: none;
+    color: #5656f6;
+    transition: 0.3s;
+}
+
+p {
+    margin: 4px 0px;
+}
+
+hr {
+    border: none;
+    height: 4px;
+    border-radius: 6px;
+    background-color: var(--accent);
+}
+
+a:hover {
+    color: var(--accent);
+    text-shadow: -1px 1px 12px var(--accent);
+    background: linear-gradient(121deg, var(--accent), #ca00ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media screen and (max-width:900px) {
+    .sidenav .closebtn {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        font-size: 20px;
+        display: block
+    }
+
+    .sidenav {
+        width: 70vw
+    }
+
+    #main {
+        margin-left: 0
+    }
+
+    .tabcontent {
+        padding: 0px 8px 0px 19px;
+        padding-top: 50px;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        right: 0px;
+        margin: 0px;
+
+    }
+
+    .main {
+        justify-content: center
+    }
+
+    header {
+        width: 100vw;
+        top: 0px;
+        position: absolute;
+        font-weight: 500;
+        color: var(--text);
+        height: 49px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        padding: 0 0 0 20px;
+        background: #161618;
+        background-size: 400% 400%;
+        align-items: center;
+        justify-content: flex-start
+    }
+
+
+    .logoSideNav {
+        width: 15vw;
+        cursor: pointer;
+        margin: 9px;
+
+    }
+}

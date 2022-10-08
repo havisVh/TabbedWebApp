@@ -1,0 +1,52 @@
+{
+    "name": "Tabbed Web app",
+    "short_name": "TWA",
+    "description": "The awesome tabbed web app!",
+    "icons": [
+        {
+            "src": "favicon.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/maskable_icon_x48.png",
+            "sizes": "48x48",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/maskable_icon_x72.png",
+            "sizes": "72x72",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/maskable_icon_x96.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/maskable_icon_x128.png",
+            "sizes": "128x128",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/maskable_icon_x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/maskable_icon_x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "icons/maskable_icon_x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "index.html",
+    "display": "standalone",
+    "theme_color": "#5656f6",
+    "background_color": "#000000"
+}
