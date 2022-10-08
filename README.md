@@ -1,5 +1,5 @@
 # TabbedWebApp
-## A lightweight, blazingly fast tabbed web app.
+## A lightweight 🪶, blazingly fast 🚀, tabbed web app📱.
 ### Built with JS and HTML
 <hr></hr>
 
