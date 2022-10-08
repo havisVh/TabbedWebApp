@@ -11,7 +11,7 @@ See the [demo](https://tabbed.web.app/demo)
 3. Edit the appshellfiles variable in the service worker to add your newly created files to cache, also make sure to edit the version no. befor every deploy.
 4.  I Strongly suggest making the foreground and background of your app icon seperately, and later combine them in [Maskable App](https://maskable.app/editor)
 
-> A project by Havis V H
+> A project by Havis V H 👨🏽‍💻
 
 <br></br>
 
