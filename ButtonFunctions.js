@@ -22,7 +22,6 @@ function shareOn(title, alt, link) {
 }
 
 
-let deferredPrompt;
 window.addEventListener('beforeinstallprompt', (e) => {
     e.preventDefault();
     deferredPrompt = e;

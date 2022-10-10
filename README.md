@@ -3,7 +3,7 @@
 ### Built with JS and HTML
 <hr></hr>
 
-See the [demo](https://tabbed.web.app/demo)
+See the [demo](https://thetabbed.web.app/demo)
 <br></br>
 ## Instructions
 1. Make Sure to edit the manifest.json file to incorprate your app  information.
