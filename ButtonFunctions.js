@@ -37,3 +37,11 @@ async function pwainstall() {
         console.log('User dismissed the install prompt');
     }
 }
+var urls = {
+    "TWA" : "https://tabbed.web.app"
+}
+
+function goTo(url){
+    console.log([url,urls.url])
+location.href = urls[url]
+}

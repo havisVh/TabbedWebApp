@@ -1,28 +1,29 @@
-async function openPage(pageName, elmnt, color) {
-    // Hide all elements with class="tabcontent" by default */
-    var i, tabcontent, tablinks;
+async function getRoute(url){
+    var markos = await fetch(url + ".html").then(function (response) {
+    
+        
+        return response.text();
+    }).then(function (html) {
+        
+        return html
 
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.opacity = "0%"
-        await setTimeout(tabhide(tabcontent[i]), 20)
+    }).catch(function (err) {
+    
+        console.warn('Something went wrong.', err);
+    });
+    return markos
 
-    }
+}
 
-    // Remove the background color of all tablinks/buttons
+async function openRoute(Page,elmnt){
+
+    
+
     tablinks = document.getElementsByClassName("tablink");
     for (i = 0; i < tablinks.length; i++) {
         tablinks[i].style.backgroundColor = "";
         tablinks[i].style.color = "rgb(255 255 255 / 79%)";
     }
-
-    // Show the specific tab content
-    document.getElementById(pageName).style.display = "flex";
-    await setTimeout(tabShow(pageName), 200)
-
-
-
-
     elmnt.style.backgroundColor = "#5656f6a3";
     elmnt.style.color = "rgb(255 255 255/200%)";
     elmnt.style.borderRadius = "4px"
@@ -31,6 +32,10 @@ async function openPage(pageName, elmnt, color) {
 
         document.getElementById("mySidenav").style.width = "0";
     }
+    var pageContent = await getRoute(Page)
+    document.getElementById("view").innerHTML = pageContent
+    
+
 }
 function tabhide(tj) {
     tj.style.display = "none";
@@ -52,6 +57,7 @@ function openNav() {
 
 /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
 function closeNav() {
+    console.warn("nav closed")
     document.getElementById("mySidenav").style.opacity = "0";
 
     document.getElementById("mySidenav").style.width = "0";
@@ -63,20 +69,19 @@ function resetbody() {
 
 }
 async function checkSize() {
-    if (document.documentElement.clientWidth > 900) {
+   if (document.documentElement.clientWidth > 900) {
         document.body.style.opacity = "0%"
-
-
         document.getElementById("mySidenav").style.width = "22vw";
         document.getElementById("mySidenav").style.opacity = "1";
-        await setTimeout(resetbody, 200)
+        await setTimeout(resetbody, 400)
 
-
-    } else {
+    } else if (document.documentElement.clientWidth < 920) {
         document.getElementById("mySidenav").style.width = "0";
         document.getElementById("mySidenav").style.opacity = "0";
+        
 
     }
+    
 }
 
 addEventListener('resize', checkSize);
@@ -91,7 +96,7 @@ onload = (event) => {
     if (!navigator.onLine) {
         document.getElementById("offlineA").style.display = "flex"
 
-    }
+    }checkSize()
 };
 function updateOnlineStatus() {
     document.getElementById("offlineA").style.display = "none"
@@ -108,3 +113,5 @@ window.addEventListener('DOMContentLoaded', () => {
         document.getElementById("installMobile").style.display = "none"
     }
 });
+
+
